@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CeaserToken (CSR) - Designed for PulseChain Pre Bull Market!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #f8f5f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+
+        header,
+        footer {
+            background: #8b0000;
+            color: #f8f5f0;
+            text-align: center;
+            padding: 1rem;
+            border-bottom: 5px solid #4b0082;
+            transition: background-color 0.3s;
+        }
+
+        header:hover,
+        footer:hover {
+            background-color: #a52a2a;
+        }
+
+        header {
+            font-size: 2.5rem;
+            font-weight: bold;
+            padding: 2rem 1rem;
+        }
+
+        footer {
+            padding: 2rem 1rem;
+        }
+
+        main {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 1.5rem;
+            border: 2px solid #4b0082;
+            border-radius: 10px;
+            background: #fff8dc;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        h2 {
+            color: #8b0000;
+            border-bottom: 2px solid #4b0082;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .intro {
+            background: #f0e68c;
+            color: #333;
+        }
+
+        .intro p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background: #8b0000;
+            color: #fff8dc;
+            border: 2px solid #4b0082;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #4b0082;
+            color: #fff8dc;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            background: #8b0000;
+            color: #fff8dc;
+            border: 1px solid #4b0082;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .tax-theme {
+            background: #8b0000;
+            color: #fff8dc;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            border: 2px solid #4b0082;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: #8b0000;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            .full-width {
+                grid-column: span 1;
+            }
+        }
+
+        .details {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            border: 2px solid #4b0082;
+            border-radius: 10px;
+            background: #fff8dc;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .cs-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .cs-content {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .cs-topper {
+            font-size: 1.2rem;
+            color: #8b0000;
+        }
+
+        .cs-title {
+            font-size: 2rem;
+            color: #333;
+            margin-top: 0.5rem;
+        }
+
+        .cs-card-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .cs-item {
+            background: #fff8dc;
+            border: 2px solid #4b0082;
+            border-radius: 10px;
+            padding: 1.5rem;
+            flex: 1 1 calc(25% - 2rem);
+            max-width: calc(25% - 2rem);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cs-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .cs-icon {
+            margin-bottom: 1rem;
+        }
+
+        .cs-h3 {
+            font-size: 1.5rem;
+            color: #8b0000;
+        }
+
+        .cs-item-text {
+            color: #333;
+        }
+
+        @media (max-width: 1024px) {
+            .cs-item {
+                flex: 1 1 calc(50% - 2rem);
+                max-width: calc(50% - 2rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cs-item {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "none") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        CeaserToken (CSR) - Designed for PulseChain Pre Bull Market!
+    </header>
+    <main>
+        <section class="intro full-width">
+            <p>Welcome to <span class="highlight">CeaserToken (CSR)</span>, a revolutionary cryptocurrency crafted for the PulseChain network. CeaserToken is not just a digital asset; it's a financial ecosystem where every transaction benefits the entire community. With innovative tokenomics and a transparent fee structure, CeaserToken is poised for sustainable growth and rewarding experiences for its holders.</p>
+            <a href="#" class="button" onclick="toggleDetails('details1')">Join the Community</a>
+        </section>
+        <section class="features">
+            <h2>Key Features</h2>
+            <p>CeaserToken offers a range of features designed to enhance value and usability:</p>
+            <ul>
+                <li><span class="badge">Name:</span> CeaserToken</li>
+                <li><span class="badge">Symbol:</span> CSR</li>
+                <li><span class="badge">Decimals:</span> 9</li>
+                <li><span class="badge">Total Supply:</span> 110,000,000 CSR</li>
+            </ul>
+            <p>Each of these features is designed to maximize the token's utility and potential for growth, providing a robust foundation for a thriving community.</p>
+        </section>
+        <section class="fees">
+            <h2>Transaction Fees</h2>
+            <p>CeaserToken incorporates a unique fee structure to support its ecosystem:</p>
+            <ul>
+                <li><span class="highlight">Redistribution Fee (1.69%):</span> A portion of every transaction is automatically redistributed to all existing token holders, encouraging long-term holding and participation.</li>
+                <li><span class="highlight">Burn Fee (0.31%):</span> Another portion of every transaction is permanently removed from circulation, reducing the total supply over time and increasing the scarcity and potential value of the remaining
